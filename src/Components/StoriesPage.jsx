@@ -1,6 +1,8 @@
 // StoriesPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { StoriesPageCard } from './StoriesPageCard';
+
 
 export const StoriesPage = () => {
   const [stories, setStories] = useState([]);
@@ -12,6 +14,7 @@ export const StoriesPage = () => {
           'https://gateway.marvel.com:443/v1/public/stories?ts=1&apikey=6a5c0755a406d9490952564f44d06492&hash=2792c3307da6bb46d3e4a6da630219c6'
         );
         setStories(res.data.data.results);
+        console.log(res.data.data.results)
       } catch (error) {
         console.error('Error fetching stories:', error);
         setStories([]); // Set empty array in case of an error
@@ -22,7 +25,11 @@ export const StoriesPage = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: 'lightgreen' }}>
+    <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', backgroundImage: 'url(./images/newback.jpg)' , backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    color: 'white',
+    padding: '20px'}}>
+
       <h2>Stories</h2>
       {stories.length > 0 ? (
         <ul>

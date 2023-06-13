@@ -12,7 +12,7 @@ import { EventsPageCard } from './EventsPageCard';
       try {
         const res = await axios.get(events);
         setItem(res.data.data.results);
-       // console.log(res.data.data.results)
+       console.log(res.data.data.results)
       } catch (error) {
         console.error('Error fetching Events:', error);
       }
@@ -24,7 +24,8 @@ import { EventsPageCard } from './EventsPageCard';
   
 
   return (
-      <div style={{ backgroundColor: 'lightblue' }}>
+    <div style={{ backgroundColor: ' rgba(0, 128, 0, 0.3) ',display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
+
         <h2>EVENTS</h2>
        {
         (!item)?<p>Not Found</p>:<EventsPageCard data={item}/>

@@ -22,7 +22,9 @@ const ComicsPage = () => {
     
   
     return (
-        <div style={{ backgroundColor: 'lightblue' }}>
+      <div style={{ backgroundColor: ' rgba(0, 128, 0, 0.3) ',backgroundImage:'url(./images/heroes.jpg)' ,display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
+
+
           <h2>Comics</h2>
          {
           (!item)?<p>Not Found</p>:<ComicsPageCard data={item}/>

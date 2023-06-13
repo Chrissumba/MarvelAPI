@@ -36,7 +36,7 @@ export const Main = () => {
         <
         div className = "bg" >
         <
-        img src = "./images/marvel.jpeg"
+        img src = "./images/moreheroes.jpg"
         alt = "" / >
         <
         /div> <
