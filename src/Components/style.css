@@ -12,6 +12,38 @@ body {
     height: 550px;
 }
 
+.header {
+    position: relative;
+}
+
+.bg {
+    position: relative;
+}
+
+.links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.links a {
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+}
+
+.links a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
 .search-bar {
     width: 80%;
     margin: 0 auto;

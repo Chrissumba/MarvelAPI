@@ -39,6 +39,12 @@ export const Main = () => {
         img src = "./images/moreheroes.jpg"
         alt = "" / >
         <
+        div className = "links" >
+        <
+        Link to = "/events" > View Events < /Link> <
+        Link to = "/stories" > View Stories < /Link> <
+        Link to = "/comics" > View Comics < /Link> <
+        /div> <
         /div> <
         div className = "search-bar" >
         <
@@ -52,19 +58,9 @@ export const Main = () => {
             (e) => setSearch(e.target.value) }
         onKeyPress = { searchMarvel }
         /> <
-        /div> <
-        div >
+        /div>
+
         <
-        Link to = "/events" > View Events < /Link> <
-        /div> <
-        div >
-        <
-        Link to = "/stories" > View Stories < /Link> <
-        /div> <
-        div >
-        <
-        Link to = "/comics" > View Comics < /Link>  <
-        /div> <
         /div> <
         div className = "content" > { item ? < Card data = { item } /> : <p>An Error has Occurred</p > } <
         /div> <
