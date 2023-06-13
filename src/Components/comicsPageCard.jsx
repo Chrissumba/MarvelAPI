@@ -12,7 +12,10 @@ export const ComicsPageCard = ({ data }) => {
               onClick={()=>navigate(`/${item.id}`)}>
                 <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt="" />
                 <div className="title">
-                  <h3>{item.name}</h3>
+                  <h3>{item.title}</h3>
+                </div>
+                <div className="VariantDescription">
+                  <h4>{item.variantDescription}</h4>
                 </div>
               </div>
             )
